@@ -4,16 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
+  <!-- Google Font Link -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-<!-- Link to your CSS file -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Link to your CSS file -->
+  <style>
+    /* Reset some default styles */
+    body, h1, h2, h3, h4, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Body styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Navigation styles */
+    nav {
+      background: #007BFF;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-menu-btn, .nav-close-btn, .theme-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 0 10px;
+    }
+
+    .mobile-nav {
+      display: none; /* Initially hidden */
+    }
+
+    /* About Us section styles */
+    .about-us {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #007BFF;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 15px;
+      color: #333;
+    }
+
+    h4 {
+      margin-top: 10px;
+      color: #555;
+    }
+
+    p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    /* Team member styles */
+    div {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: #007BFF;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <nav>
