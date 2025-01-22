@@ -1,18 +1,36 @@
-/*-----------------------------------*\ 
-  #style.css
-\*-----------------------------------*/
+ #style.css
+/* src/NavBar.css */
+.mobile-nav {
+  display: none;
+}
 
-/**
- * copyright 2022 @codewithsadee 
- */
+.mobile-nav.active {
+  display: block;
+}
 
+.theme-toggle .theme-btn {
+  margin: 0 10px;
+}
 
+.theme-toggle .theme-btn.light {
+  background-color: #fff;
+}
 
+.theme-toggle .theme-btn.dark {
+  background-color: #333;
+}
 
+/* src/App.css */
+body.light-theme {
+  background-color: #fff;
+  color: #000;
+}
 
-/*-----------------------------------*\ 
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
+body.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
 
 .light-theme {
 
