@@ -1176,7 +1176,8 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+     transform: translateY(-2px);
+  box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.1);
 }
 
 /* Fade-in animation */
