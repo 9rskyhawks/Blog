@@ -1,256 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http;equiv="X-UA-Compatible" content="le=edge">
+     <!-- Bootstrap CSS --> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Font-Awesome -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-  <!-- Google Font Link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Link to your CSS file -->
-  <style>
-    /* Reset some default styles */
-    body, h1, h2, h3, h4, p {
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Body styles */
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-      padding: 20px;
-    }
-
-    /* Navigation styles */
-    nav {
-      background: #007BFF;
-      color: #fff;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-menu-btn, .nav-close-btn, .theme-btn {
-      background: none;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      font-size: 16px;
-      margin: 0 10px;
-    }
-
-    .mobile-nav {
-      display: none; /* Initially hidden */
-    }
-
-    /* About Us section styles */
-    .about-us {
-      max-width: 800px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    h1 {
-      color: #007BFF;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    section {
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      color: #007BFF;
-      margin-bottom: 10px;
-    }
-
-    h3 {
-      margin-top: 15px;
-      color: #333;
-    }
-
-    h4 {
-      margin-top: 10px;
-      color: #555;
-    }
-
-    p {
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-
-    /* Team member styles */
-    div {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-    }
-
-    /* Footer styles */
-    footer {
-      text-align: center;
-      padding: 10px 0;
-      background: #007BFF;
-      color: #fff;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
-</head>
+        <link rel="stylesheet" href="css/Team.css">
+        <title>Team</title>
+    </head>
 <body>
+    <section class="team">
+        <div class="container">
+            <h1>Meet The Team</h1>
 
-  <header>
-
-    <div class="container">
-
-      <nav class="navbar">
-
-
-        <div class="btn-group">
-
-          <button class="theme-btn theme-btn-mobile light">
-            <ion-icon name="moon" class="moon"></ion-icon>
-            <ion-icon name="sunny" class="sun"></ion-icon>
-          </button>
-
-          <button class="nav-menu-btn">
-            <ion-icon name="menu-outline"></ion-icon>
-          </button>
-
+        <div class="card">
+            <div class="box">
+                <img src="./images/Humza1.jpg" alt="Image" class="image">
+                <h4>Humza Hasan</h4>
+                <h5>Mern Intern</h5>
+                <div class="Social">     
+                    <a href=""><i class="fa fa-github-square"></i></a>
+                    <a href=""><i class="fa fa-linkedin-square"></i></a>
+                    <a href=""><i class="fa fa-facebook-square"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                </div>    
+            </div>
         </div>
 
-        <div class="flex-wrapper">
-
-          <ul class="desktop-nav">
-
-            <li>
-              <a href="#" class="nav-link">Home</a>
-            </li>
-
-            <li>
-              <a href="About Us.html" class="nav-link">About Us</a>
-            </li>
-
-            <li>
-              <a href="#" class="nav-link">Contact</a>
-            </li>
-
-          </ul>
-
-          <button class="theme-btn theme-btn-desktop light">
-            <ion-icon name="moon" class="moon"></ion-icon>
-            <ion-icon name="sunny" class="sun"></ion-icon>
-          </button>
-
+        <div class="card">
+            <div class="box">
+                <img src="./images/Tarun1.jpg" alt="Image" class="image">
+                <h4>Tarun Chaudhary</h4>
+                <h5>Web Developer</h5>
+                <h5>“Web Developer”,Bachelor's of Technology in Computer Science from F.G.I.E.T Raebareli (U.P), 
+                    and ready to take new challenges required to perform better</h5>
+                <div class="Social">
+                     <a href="https://github.com/tsctarun" target="_blank"><i class="fa fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/tarun-chaudhary-2132a7150/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="https://www.facebook.com/tsctarun/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/tsctarun/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
 
-        <div class="mobile-nav">
+        <div class="card">
+            <div class="box">
+                <img src="./images/AnjaliS.jpg" alt="Image" class="image">
+                <h4>Anjali Srivastava</h4>
+                <h5>Frontend Developer</h5>
+                <h5>Pre-final Year Undergraduate at the Indian Institute of Information Technology Una.
+                     Frontend Developer and Open Source enthusiast.</h5>
+                <div class="Social">     
+                    <a href="https://www.github.com" target="_blank"><i class="fa fa-github-square"></i></a>
+                    <a href=":https://www.linkedin.com/in/anjali-srivastava-939852178/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="https://m.facebook.com/anjali.srivastava.33449138?ref=bookmarks" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+  
+        <div class="card">
+            <div class="box">
+                <img src="./images/Sabiha.jpg" alt="Image" class="image">
+                <h4>Sabiha</h4>
+                <h5>Software Developer</h5>
+                <h5>I am a sophomore at Birla Institute of Technology and Science, Pilani,
+                    enthusiastic about software development, looking forward in this domain.</h5>
+                <div class="Social">     
+                    <a href=" https://github.com/sab227" target="_blank"><i class="fa fa-github-square"></i></a>
+                    <a href=" https://www.linkedin.com/in/sabiha-p" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>    
+            </div>
+        </div>
+      
+        <div class="card">
+            <div class="box">
+                <img src="./images/Anjali.jpg" alt="Image" class="image">
+                <h4>Anjali Gupta</h4>
+                <h5>Frontend Developer</h5>
+                <h5>Currently pursuing B.Tech from Indian Institute of Technology, Indore, MP.
+                     I am working in Web Development and Competitive Programming.</h5>
+                <div class="Social"> 
+                    <a href="https://www.github.com/anjali7786" target="_blank"><i class="fa fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/anjali-gupta-8a6b721a3/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100011414157292" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://instagram.com/guptaanjali7786" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>    
+            </div>
+        </div>
+ 
+       <div class="card">
+            <div class="box">
+                <img src="./images/Akash.jpg" alt="Image" class="image">
+                <h4>Akash Mittal</h4>
+                <h5>Software Developer</h5>
+                <h5>I am pursuing btech at UIET, kurukshtera.
+                     currently working in web development
+                      and competitive programmer.</h5>
+                <div class="Social">     
+                    <a href="https://GitHub.com/akash0201" target="_blank"><i class="fa fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/akash-mittal-294a92181" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="https://m.facebook.com/aakash.mittal.9615"><i class="fa fa-facebook-square" target="_blank"></i></a>
+                    <a href="https://www.instagram.com/akash_mittal16" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>    
+            </div>
+       </div>
 
-          <button class="nav-close-btn">
-            <ion-icon name="close-outline"></ion-icon>
-          </button>
-
-          <div class="wrapper">
-
-            <p class="h3 nav-title">Main Menu</p>
-
-            <ul>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="About Us.html" class="nav-link">About Us</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#" class="nav-link">Contact</a>
-              </li>
-            </ul>
-
-          </div>
-
-          <div>
-
-            <p class="h3 nav-title">Topics</p>
-
-            <ul>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Database</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#" class="nav-link">Accessibility</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#" class="nav-link">Web Performance</a>
-              </li>
-            </ul>
-
-          </div>
-
+        <div class="card">
+            <div class="box">
+                <img src="./images/Muskan1.jpg" alt="Image" class="image">
+                <h4>Muskan Jaglan</h4>
+                <h5>Python Programmar</h5>
+                <h5>I am pursuing B.Tech from GTBIT, New Delhi.
+                 Currently Working in Web Development & Python programming technical stacks.</h5>
+                <div class="Social">
+                    <a href="https://www.github.com" target="_blank"><i class="fa fa-github-square"></i></a>
+                    <a href=" https://www.linkedin.com/in/muskan-jaglan-6b645817b/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href=" https://www.facebook.com/muskan.jaglan.7" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href=" https://www.instagram.com/muskan.jaglan/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>    
+            </div>
         </div>
 
-      </nav>
+        <div class="card">
+            <div class="box">
+                <img src="./images/Uren1.jpg" alt="Image" class="image">
+                <h4>Uren Mador</h4>
+                <h5>Frontend Developer</h5>
+                <h5>College sophomore majoring in Computer Science at LeMoyne-Owen College. I
+                    am passionate about using technology to meet the ends of all users.</h5>
+                <div class="Social">
+                    <a href="https://www.github.com/Uren-M" target="_blank"><i class="fa fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/uren-mador/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="https://www.facebook.com/uren.mador/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/themadoria/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+            
+        <div class="card">
+            <div class="box">
+                <img src="./images/Amisha.jpg" alt="Image" class="image">
+                <h4>Amisha Jangra</h4>
+                <h5>Frontend Developer</h5>
+                <h5>I am a sophomore in Btech CSE from IGDTUW, Delhi. 
+                    I like mixing code and creativity, currently working with frontend development.</h5>
+                <div class="Social">    
+                    <a href="https://github.com/mighty-geek" target="_blank"><i class="fa fa-github-square"></i></a>
+                    <a href=":https://www.linkedin.com/in/amisha-jangra-b91594192" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
 
     </div>
-
-  </header>
-
-
-  <div class="about-us">
-    <h1>About Us</h1>
-    <section>
-      <h2>Our Team</h2>
-      <p>Welcome to our blog! We are a passionate and diverse team of writers, developers, and creatives dedicated to bringing you the latest insights, stories, and updates on a variety of topics. Our mission is to create a platform where knowledge meets creativity, and where our readers can find inspiration and valuable information.</p>
-    </section>
-
-    <section>
-      <h3>Meet the Team</h3>
-      <div>
-        <h4>John Doe - Founder & Lead Developer</h4>
-        <p>John is the visionary behind our blog. With over a decade of experience in web development and a keen eye for design, he ensures our platform is both functional and aesthetically pleasing.</p>
-      </div>
-      <div>
-        <h4>Jane Smith - Content Strategist</h4>
-        <p>Jane is our wordsmith extraordinaire. She curates and crafts engaging content that resonates with our audience. Her passion for storytelling and knack for research drive the quality of our articles.</p>
-      </div>
-      <div>
-        <h4>Rajesh Kumar - SEO Specialist</h4>
-        <p>Rajesh is the wizard behind our blog's visibility. His expertise in search engine optimization ensures that our content reaches the widest possible audience, helping us grow our community.</p>
-      </div>
-      <div>
-        <h4>Emily Wong - Social Media Manager</h4>
-        <p>Emily is the voice of our blog on social media. She connects with our readers, shares our latest posts, and keeps the conversation going across all our platforms.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Our Mission</h2>
-      <p>Our blog is a labor of love, driven by our collective passion for sharing knowledge and fostering a sense of community. Whether it's tech tutorials, lifestyle tips, or thought-provoking essays, we aim to provide content that informs, entertains, and inspires.</p>
-    </section>
-
-    <section>
-      <h2>Join Us</h2>
-      <p>We are always on the lookout for new voices and perspectives. If you have a passion for writing and want to contribute to our blog, feel free to reach out to us. Let's create something amazing together!</p>
-    </section>
-  </div>
-
-  <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    </section>  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/  GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
 </body>
 </html>
