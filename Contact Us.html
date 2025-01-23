@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto Slab', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        header {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideIn 1s ease-in-out;
+        }
+        header .page-title {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 1.5em;
+            text-align: center;
+            color: #ffffff; /* Changed to white */
+            animation: zoomIn 1s ease-in-out;
+        }
+        header nav {
+            margin-right: 20px;
+        }
+        header nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            animation: fadeIn 1.5s ease-in-out;
+            cursor: pointer; /* Changes cursor to hand */
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #2c2c2c;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .section p {
+            margin: 5px 0;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .contact-info a,
+        .social-media a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            animation: fadeIn 1.5s ease-in-out;
+            cursor: pointer; /* Changes cursor to hand */
+        }
+        .contact-info a:hover,
+        .social-media a:hover {
+            color: #0056b3;
+        }
+        .social-media {
+            text-align: center;
+        }
+        .social-media a {
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        .social-media a:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="About Us.html">About Us</a>
+        </nav>
+    </header>
+    <div style="text-align: center;">
+    <h1 class="page-title">Contact Us</h1>
+</div>
+   
+    <div class="container">
+        <div class="section contact-info">
+            <p><strong>Email:</strong> <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+            <p><strong>Support:</strong> <a href="mailto:support@example.com">support@example.com</a></p>
+            <p><strong>Phone:</strong> +1-234-567-890</p>
+            <p><strong>Support Line:</strong> +1-987-654-321</p>
+            <p><strong>Mailing Address:</strong></p>
+            <p> <a href="About Us.html">Our Team </a><br>
+              Blog <br>
+               123 Street<br>
+               City, State, ZIP Code</p>
+        </div>
+        <div class="section business-hours">
+            <p><strong>Business Hours:</strong></p>
+            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+            <p>Saturday: 10:00 AM - 2:00 PM</p>
+            <p>Sunday: Closed</p>
+        </div>
+        <div class="section social-media">
+            <p><strong>Social Media:</strong></p>
+            <p><a href="https://www.facebook.com/yourprofile">Facebook</a> | 
+               <a href="https://www.twitter.com/yourprofile">Twitter</a> | 
+               <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> | 
+               <a href="https://www.instagram.com/yourprofile">Instagram</a></p>
+        </div>
+    </div>
+</body>
+</html>
