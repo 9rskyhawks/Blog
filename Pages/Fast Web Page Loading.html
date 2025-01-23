@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .post-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .post-header {
+            padding: 20px;
+            background-color: #1f2d3d;
+            color: white;
+            text-align: center;
+        }
+        .post-header img {
+            height: 60px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .post-header h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .post-content {
+            padding: 20px;
+        }
+        .post-content .category {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: #4caf50;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .post-content p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .post-footer {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-top: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+        .post-footer img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .post-footer .author-info {
+            font-size: 14px;
+            color: #555;
+        }
+        .post-footer .author-info .name {
+            font-weight: bold;
+            color: #333;
+        }
+        .comments-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+        .comments-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .comments-section h3:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin-top: 5px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .comment .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .comment .date {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+        .comment .content {
+            font-size: 14px;
+            color: #555;
+        }
+        .add-comment {
+            margin-top: 20px;
+        }
+        .add-comment textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+        .add-comment button {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-comment button:hover {
+            background-color: #45a049;
+        }
+        .no-comments {
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="post-header">
+            <img src="feature-phone-icon.png" alt="Feature Phone Icon">
+            <h1>Fast Web Page Loading on a $20 Feature Phone</h1>
+        </div>
+        <div class="post-content">
+            <div class="category">Web Performance</div>
+            <p>
+                Feature phones are affordable devices, typically under $20–$25, enabling millions in developing countries to access the web. These devices serve as a
+                bridge for digital inclusion, offering basic browsing capabilities. However, building fast-loading web pages for feature phones presents unique
+                challenges due to limited processing power, memory, and slow network connections.
+            </p>
+            <h2>Challenges of Feature Phones</h2>
+            <p>
+                Feature phones rely on basic operating systems and have significantly less computing power compared to smartphones. With slow 2G or 3G connections,
+                delivering optimized content becomes critical. Developers must carefully manage assets like images, scripts, and stylesheets to ensure acceptable
+                performance.
+            </p>
+            <h2>Best Practices</h2>
+            <p>
+                - Use lightweight, minified assets to reduce page size.<br>
+                - Leverage server-side rendering to improve load times.<br>
+                - Optimize images for low-bandwidth environments.<br>
+                - Implement caching strategies to minimize repeated resource loading.<br>
+                - Use progressive enhancement to ensure compatibility.
+            </p>
+            <h2>Conclusion</h2>
+            <p>
+                Building fast-loading web pages for feature phones isn't just about technical challenges. It represents an opportunity to bring digital resources to
+                communities that depend on affordable technology. With thoughtful design and optimization, developers can make the web more inclusive and impactful.
+            </p>
+        </div>
+        <div class="post-footer">
+            <img src="" alt="Julia Walker">
+            <div class="author-info">
+                <span class="name">Julia Walker</span><br>
+                <span>Published on Dec 10, 2021</span>
+            </div>
+        </div>
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div class="comment">
+                <div class="author">Sam Lee</div>
+                <div class="date">December 11, 2021</div>
+                <div class="content">This is a much-needed topic! Accessibility is so important.</div>
+            </div>
+            <div class="comment">
+                <div class="author">Anita Raj</div>
+                <div class="date">December 12, 2021</div>
+                <div class="content">I appreciate the detailed best practices. Great work!</div>
+            </div>
+            <div class="add-comment">
+                <textarea placeholder="Add your comment here..."></textarea>
+                <button>Submit</button>
+            </div>
+            <div class="no-comments" style="display: none;">No comments yet. Be the first to comment!</div>
+        </div>
+    </div>
+</body>
+</html>

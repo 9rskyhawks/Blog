@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how to monitor web performance using the PageSpeed Insights API. Get insights and improve your website's speed and user experience.">
+  <title>Monitoring Performance with the PageSpeed Insights API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 20px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #0077cc;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-left: 5px solid #0077cc;
+      overflow-x: auto;
+    }
+    code {
+      font-family: Consolas, 'Courier New', monospace;
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Monitoring Performance with the PageSpeed Insights API</h1>
+    <p>Optimize Your Website for Speed and User Experience</p>
+  </header>
+  <main>
+    <section>
+      <h2>What is the PageSpeed Insights API?</h2>
+      <p>
+        The <strong>PageSpeed Insights (PSI) API</strong> is a tool provided by Google that analyzes the performance of your website. It provides a score and actionable insights to optimize your website for speed and user experience.
+      </p>
+    </section>
+
+    <section>
+      <h2>Why Use the PSI API?</h2>
+      <ul>
+        <li>Identify performance bottlenecks.</li>
+        <li>Receive detailed suggestions for optimization.</li>
+        <li>Track performance changes over time.</li>
+        <li>Automate performance monitoring for your projects.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 1: Get API Access</h2>
+      <p>
+        To use the PSI API, you’ll need to set up an API key:
+      </p>
+      <ol>
+        <li>Go to the <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a>.</li>
+        <li>Create a new project or select an existing one.</li>
+        <li>Enable the <strong>PageSpeed Insights API</strong>.</li>
+        <li>Generate an API key under the “APIs & Services” section.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Step 2: Make an API Request</h2>
+      <p>Here’s an example of an API request using <code>curl</code>:</p>
+      <pre><code>curl "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://example.com&key=YOUR_API_KEY"</code></pre>
+      <p>The response will include:</p>
+      <ul>
+        <li><strong>Performance Score:</strong> A numeric score (0–100).</li>
+        <li><strong>Core Web Vitals:</strong> Metrics like LCP, FID, and CLS.</li>
+        <li><strong>Opportunities:</strong> Suggestions to improve performance.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 3: Parse the API Response</h2>
+      <p>The API returns a JSON response. Here’s an example of parsing the data in JavaScript:</p>
+      <pre><code>const fetch = require('node-fetch');
+
+const apiKey = 'YOUR_API_KEY';
+const url = 'https://example.com';
+
+fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${apiKey}`)
+  .then(response => response.json())
+  .then(data => {
+    console.log('Performance Score:', data.lighthouseResult.categories.performance.score * 100);
+    console.log('First Contentful Paint:', data.lighthouseResult.audits['first-contentful-paint'].displayValue);
+  })
+  .catch(error => console.error('Error:', error));
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 4: Use Insights to Improve Performance</h2>
+      <p>Common recommendations from PSI include:</p>
+      <ul>
+        <li>Minify CSS, JavaScript, and HTML files.</li>
+        <li>Optimize and compress images.</li>
+        <li>Enable browser caching and use a CDN.</li>
+        <li>Implement lazy loading for images and videos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Helpful Tools and Resources</h2>
+      <ul>
+        <li><a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a> - Analyze your website directly.</li>
+        <li><a href="https://developers.google.com/web/tools/lighthouse" target="_blank">Lighthouse</a> - For in-depth audits.</li>
+        <li><a href="https://web.dev/measure/" target="_blank">Web.dev</a> - Monitor and learn about performance.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Performance Monitoring Guide</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .post-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .post-header {
+            padding: 20px;
+            background-color: #1f2d3d;
+            color: white;
+            text-align: center;
+        }
+        .post-header img {
+            height: 60px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .post-header h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .post-content {
+            padding: 20px;
+        }
+        .post-content .category {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: #4caf50;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .post-content p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .post-footer {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-top: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+        .post-footer img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .post-footer .author-info {
+            font-size: 14px;
+            color: #555;
+        }
+        .post-footer .author-info .name {
+            font-weight: bold;
+            color: #333;
+        }
+        .comments-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+        .comments-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .comments-section h3:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin-top: 5px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .comment .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .comment .date {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+        .comment .content {
+            font-size: 14px;
+            color: #555;
+        }
+        .add-comment {
+            margin-top: 20px;
+        }
+        .add-comment textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+        .add-comment button {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-comment button:hover {
+            background-color: #45a049;
+        }
+        .no-comments {
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="post-header">
+            <img src="mongodb-logo.png" alt="MongoDB Logo">
+            <h1>Building Microservices with Dropwizard, MongoDB & Docker</h1>
+        </div>
+        <div class="post-content">
+            <div class="category">Database</div>
+            <p>
+                MongoDB is a NoSQL database oriented to documents, storing data in flexible, JSON-like documents. It combines some of the features of relational
+                databases, making it easy to use and well-suited for modern applications. In this tutorial, we explore how MongoDB can integrate seamlessly with
+                Dropwizard and Docker to build scalable and efficient microservices.
+            </p>
+            <h2>What You Will Learn</h2>
+            <p>
+                - Setting up a MongoDB instance using Docker.<br>
+                - Developing microservices with Dropwizard.<br>
+                - Best practices for integrating MongoDB into your application.<br>
+                - Deploying and managing microservices with Docker.
+            </p>
+            <h2>Why MongoDB?</h2>
+            <p>
+                MongoDB is designed for modern development with its flexible schema, scalability, and developer-friendly features. By leveraging the power of
+                MongoDB, you can easily adapt to changes in your data requirements and achieve optimal performance in your microservices architecture.
+            </p>
+            <p>
+                Furthermore, MongoDB offers excellent horizontal scaling capabilities through sharding, which allows distributing data across multiple machines. This
+                makes it an ideal choice for applications with large datasets or high throughput requirements. Its rich query language supports ad hoc queries,
+                indexing, and real-time aggregation, making data analysis faster and more efficient.
+            </p>
+            <p>
+                Another compelling aspect of MongoDB is its thriving ecosystem. With drivers for numerous programming languages and integrations with popular tools,
+                developers can seamlessly incorporate MongoDB into their tech stacks. Its robust security features, including encryption and authentication, ensure
+                that sensitive data remains protected, providing peace of mind for organizations.
+            </p>
+        </div>
+        <div class="post-footer">
+            <img src="author-image.jpg" alt="Julia Walker">
+            <div class="author-info">
+                <span class="name">Julia Walker</span><br>
+                <span>Published on Jan 17, 2022</span>
+            </div>
+        </div>
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div class="comment">
+                <div class="author">John Doe</div>
+                <div class="date">January 18, 2022</div>
+                <div class="content">Great article! Very informative and well-written.</div>
+            </div>
+            <div class="comment">
+                <div class="author">Jane Smith</div>
+                <div class="date">January 19, 2022</div>
+                <div class="content">I learned a lot about microservices. Thanks for sharing!</div>
+            </div>
+            <div class="add-comment">
+                <textarea placeholder="Add your comment here..."></textarea>
+                <button>Submit</button>
+            </div>
+            <div class="no-comments" style="display: none;">No comments yet. Be the first to comment!</div>
+        </div>
+    </div>
+</body>
+</html>

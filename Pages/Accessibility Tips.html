@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .post-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .post-header {
+            padding: 20px;
+            background-color: #1f2d3d;
+            color: white;
+            text-align: center;
+        }
+        .post-header img {
+            height: 60px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .post-header h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .post-content {
+            padding: 20px;
+        }
+        .post-content .category {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: #4caf50;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .post-content p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .post-footer {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-top: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+        .post-footer img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .post-footer .author-info {
+            font-size: 14px;
+            color: #555;
+        }
+        .post-footer .author-info .name {
+            font-weight: bold;
+            color: #333;
+        }
+        .comments-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+        .comments-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .comments-section h3:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin-top: 5px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .comment .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .comment .date {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+        .comment .content {
+            font-size: 14px;
+            color: #555;
+        }
+        .add-comment {
+            margin-top: 20px;
+        }
+        .add-comment textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+        .add-comment button {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-comment button:hover {
+            background-color: #45a049;
+        }
+        .no-comments {
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="post-header">
+            <img src="feature-phone-icon.png" alt="Feature Phone Icon">
+            <h1>
+                Accessibility Tips for Web Developers</h1>
+        </div>
+        <div class="post-content">
+            <div class="category">Web Performance</div>
+            <p>
+                It's awesome to build sites that are inclusive and accessible to everyone. The web should be a space where everyone, regardless of ability, can easily navigate and access content. There are at least six key areas of disability we can optimize for: visual, hearing, mobility, cognitive, assistive technology, and general usability. Let’s dive into some essential accessibility tips to help developers create websites that are usable by all.
+            </p>
+            <h3>Visual Impairments</h3>
+            <p>
+                High Contrast and Alt Text: Ensure high contrast between text and background for readability, and provide alt text for images so screen readers can describe them.
+                Keyboard Navigation: Make sure all interactive elements are accessible via the keyboard, not just the mouse.
+            <h3>Hearing Impairments</h3>
+            <p>Captions and Subtitles: Always include captions for videos and provide transcripts for audio content to make sure users who are deaf or hard of hearing can access the information.
+                Visual Alerts: Replace audio cues with visual ones for users who can't hear them.</p>
+            </p>
+            <h3>Mobility Impairments</h3>
+            <p>
+                Keyboard Accessibility: Ensure users can navigate the site using only the keyboard, without requiring a mouse.
+                Accessible Buttons: Buttons and clickable areas should be large enough and well-spaced for easy use.
+            </p>
+            <h2>Conclusion</h2>
+            <p>
+                Creating accessible websites is about more than meeting legal requirements—it’s about ensuring a positive experience for all users. By focusing on visual, hearing, mobility, and cognitive accessibility, developers can create more inclusive web experiences. Let’s build a web that works for everyone!
+            </p>
+        </div>
+        <div class="post-footer">
+            <img src="" alt="Julia Walker">
+            <div class="author-info">
+                <span class="name">Julia Walker</span><br>
+                <span>Published on Nov 28, 2021</span>
+            </div>
+        </div>
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div class="comment">
+                <div class="author">Sam Lee</div>
+                <div class="date">December 11, 2021</div>
+                <div class="content">This is a much-needed topic! Accessibility is so important.</div>
+            </div>
+            <div class="comment">
+                <div class="author">Anita Raj</div>
+                <div class="date">December 12, 2021</div>
+                <div class="content">I appreciate the detailed best practices. Great work!</div>
+            </div>
+            <div class="comment">
+                <div class="author">Deven chang</div>
+                <div class="date">December 5, 2022</div>
+                <div class="content">Excellent!!</div>
+            </div>
+            <div class="add-comment">
+                <textarea placeholder="Add your comment here..."></textarea>
+                <button>Submit</button>
+            </div>
+            <div class="no-comments" style="display: none;">No comments yet. Be the first to comment!</div>
+        </div>
+    </div>
+</body>
+</html>

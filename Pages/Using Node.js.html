@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how to build a RESTful CRUD API using Node.js, Express, and MongoDB. A step-by-step guide for beginners.">
+  <title>Building a RESTful CRUD API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #006d77;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 20px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #006d77;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-left: 5px solid #006d77;
+      overflow-x: auto;
+    }
+    code {
+      font-family: Consolas, 'Courier New', monospace;
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    a {
+      color: #028090;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #006d77;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Building a RESTful CRUD API</h1>
+    <p>Using Node.js, Express, and MongoDB</p>
+  </header>
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        RESTful APIs (Representational State Transfer) are a standard architecture for web services. In this guide, you'll learn how to create a CRUD (Create, Read, Update, Delete) API using <strong>Node.js</strong>, <strong>Express</strong>, and <strong>MongoDB</strong>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Prerequisites</h2>
+      <p>Before starting, ensure you have the following installed:</p>
+      <ul>
+        <li>Node.js and npm (<a href="https://nodejs.org/" target="_blank">Download here</a>).</li>
+        <li>MongoDB (<a href="https://www.mongodb.com/try/download/community" target="_blank">Download here</a> or use <a href="https://www.mongodb.com/atlas/database" target="_blank">MongoDB Atlas</a> for a cloud database).</li>
+        <li>A code editor like <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 1: Set Up the Project</h2>
+      <p>Initialize a Node.js project by running:</p>
+      <pre><code>npm init -y</code></pre>
+      <p>Install the required packages:</p>
+      <pre><code>npm install express mongoose body-parser</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 2: Create the Server</h2>
+      <p>Set up an Express server in a file named <code>server.js</code>:</p>
+      <pre><code>const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
+const app = express();
+const PORT = 5000;
+
+// Middleware
+app.use(bodyParser.json());
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/crudapi', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => console.log('MongoDB connected'))
+  .catch(err => console.error(err));
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 3: Define a Mongoose Model</h2>
+      <p>Create a model for your data. For example, a <code>Product</code>:</p>
+      <pre><code>const mongoose = require('mongoose');
+
+const ProductSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  price: { type: Number, required: true },
+  description: { type: String },
+});
+
+module.exports = mongoose.model('Product', ProductSchema);
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 4: Create CRUD Routes</h2>
+      <p>Add routes for CRUD operations in <code>server.js</code>:</p>
+      <pre><code>const Product = require('./Product');
+
+// Create
+app.post('/products', async (req, res) => {
+  const product = new Product(req.body);
+  await product.save();
+  res.send(product);
+});
+
+// Read
+app.get('/products', async (req, res) => {
+  const products = await Product.find();
+  res.send(products);
+});
+
+// Update
+app.put('/products/:id', async (req, res) => {
+  const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.send(product);
+});
+
+// Delete
+app.delete('/products/:id', async (req, res) => {
+  await Product.findByIdAndDelete(req.params.id);
+  res.send({ message: 'Product deleted' });
+});
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 5: Test Your API</h2>
+      <p>Use tools like <a href="https://www.postman.com/" target="_blank">Postman</a> or <code>curl</code> to test the API:</p>
+      <ul>
+        <li>POST <code>/products</code>: Create a product.</li>
+        <li>GET <code>/products</code>: Retrieve all products.</li>
+        <li>PUT <code>/products/:id</code>: Update a product by ID.</li>
+        <li>DELETE <code>/products/:id</code>: Delete a product by ID.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Additional Resources</h2>
+      <ul>
+        <li><a href="https://expressjs.com/" target="_blank">Express.js Documentation</a></li>
+        <li><a href="https://mongoosejs.com/" target="_blank">Mongoose Documentation</a></li>
+        <li><a href="https://www.mongodb.com/" target="_blank">MongoDB Documentation</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 RESTful API Guide</p>
+  </footer>
+</body>
+</html>

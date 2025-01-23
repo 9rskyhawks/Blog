@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A developer's checklist for building accessible web applications. Learn how to prioritize inclusivity and accessibility in your projects.">
+  <title>Don't Develop Just for Yourself - Accessibility Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #004d99;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 20px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #004d99;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #004d99;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Don't Develop Just for Yourself</h1>
+    <p>A Developer's Checklist for Accessibility</p>
+  </header>
+  <main>
+    <section>
+      <h2>Why Accessibility Matters</h2>
+      <p>
+        Accessibility ensures that everyone, including people with disabilities, can interact with and benefit from your application. Designing with accessibility in mind fosters inclusivity and improves the overall user experience.
+      </p>
+      <p>
+        Statistics show that over 1 billion people worldwide live with some form of disability. As developers, it’s our responsibility to make sure our work is usable by everyone.
+      </p>
+    </section>
+
+    <section>
+      <h2>Common Accessibility Issues</h2>
+      <ul>
+        <li>Text that lacks sufficient color contrast.</li>
+        <li>Images without meaningful alternative text (<code>alt</code> attributes).</li>
+        <li>Non-descriptive link text (e.g., "Click here").</li>
+        <li>Missing or improper use of semantic HTML elements.</li>
+        <li>Websites that are not keyboard navigable.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>A Developer's Accessibility Checklist</h2>
+      <ol>
+        <li><strong>Use Semantic HTML:</strong> Ensure proper use of <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;button&gt;</code> tags for better screen reader support.</li>
+        <li><strong>Provide Alternative Text:</strong> Add descriptive <code>alt</code> attributes for all images.</li>
+        <li><strong>Ensure Keyboard Navigation:</strong> Test your site to confirm users can navigate using only the keyboard.</li>
+        <li><strong>Check Color Contrast:</strong> Ensure text has sufficient contrast with the background using tools like <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a>.</li>
+        <li><strong>Use ARIA Roles Wisely:</strong> Apply <a href="https://www.w3.org/TR/wai-aria/" target="_blank">ARIA roles</a> when necessary to enhance accessibility, but don't overuse them.</li>
+        <li><strong>Design Responsive Interfaces:</strong> Test your application on different screen sizes and orientations.</li>
+        <li><strong>Include Captions and Transcripts:</strong> Provide captions for videos and transcripts for audio content.</li>
+        <li><strong>Test with Screen Readers:</strong> Use tools like NVDA or VoiceOver to ensure your app is screen reader-friendly.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Helpful Tools for Accessibility Testing</h2>
+      <ul>
+        <li><a href="https://wave.webaim.org/" target="_blank">WAVE</a> - Accessibility Evaluation Tool</li>
+        <li><a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd" target="_blank">axe DevTools</a> - Chrome Extension for Accessibility Testing</li>
+        <li><a href="https://developers.google.com/web/tools/lighthouse/" target="_blank">Google Lighthouse</a> - Performance and Accessibility Testing</li>
+        <li><a href="https://www.w3.org/WAI/test-evaluate/" target="_blank">W3C Evaluation Tools</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Final Thoughts</h2>
+      <p>
+        Accessibility isn’t just about meeting legal requirements or guidelines; it’s about creating an inclusive experience for everyone. By following this checklist and incorporating accessibility into your workflow, you can ensure your web applications are welcoming to all users.
+      </p>
+      <p>
+        Remember, <strong>don't develop just for yourself</strong>—think about the diverse needs of your users!
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Accessibility Checklist</p>
+  </footer>
+</body>
+</html>
