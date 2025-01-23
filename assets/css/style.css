@@ -1091,15 +1091,7 @@ footer .wrapper { text-align: center; }
 
 }
 
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-
+/* Chatbot button */
 button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -1120,6 +1112,7 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Chatbot pop-up */
 .chat-popup {
     display: none;
     position: fixed;
@@ -1133,6 +1126,7 @@ button:hover {
     animation: fadeIn 0.5s;
 }
 
+/* Chatbot header */
 .chat-header {
     display: flex;
     justify-content: space-between;
@@ -1144,10 +1138,12 @@ button:hover {
     border-top-right-radius: 5px;
 }
 
+/* Chatbot container */
 .chat-container {
     padding: 10px;
 }
 
+/* Chatbox */
 #chatbox {
     height: 200px;
     overflow-y: scroll;
@@ -1158,6 +1154,7 @@ button:hover {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* User input */
 #userInput {
     width: calc(100% - 60px);
     padding: 5px;
@@ -1165,6 +1162,7 @@ button:hover {
     border-radius: 3px;
 }
 
+/* Send button */
 button {
     width: 50px;
     padding: 5px;
@@ -1181,6 +1179,7 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1192,7 +1191,7 @@ button:hover {
     }
 }
 
-/* New styles for chatbot messages */
+/* Chatbot messages */
 .user-message, .bot-message {
     padding: 10px;
     margin: 5px 0;
