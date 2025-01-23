@@ -886,6 +886,24 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <!-- Chatbot button -->
+    <button id="openChatbot" onclick="openChat()">Chat with us!</button>
+
+    <!-- Chatbot pop-up -->
+    <div id="chatPopup" class="chat-popup">
+        <div class="chat-header">
+            <span>Chatbot</span>
+            <button onclick="closeChat()">X</button>
+        </div>
+        <div class="chat-container">
+            <div id="chatbox"></div>
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
